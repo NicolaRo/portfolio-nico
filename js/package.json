@@ -1,0 +1,14 @@
+{
+  "name": "nicolarogithubio",
+  "version": "1.0.0",
+  "description": "Sito personale di Nicola Rossi",
+  "main": "index.html",
+  "scripts": {
+    "sass": "sass --watch src/scss/style.scss:css/style.css"
+  },
+  "author": "Nicola Rossi",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.89.1"
+  }
+}
