@@ -1,0 +1,12 @@
+$primary-color: #801023;
+$bg-color: #212121;
+$text-color: #a7a8a7;
+
+body {
+  background-color: $bg-color;
+  color: $text-color;
+}
+
+a {
+  color: $primary-color;
+}
