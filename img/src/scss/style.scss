@@ -1,12 +1,358 @@
-$primary-color: #801023;
-$bg-color: #212121;
-$text-color: #a7a8a7;
+
+$font-main: 'Montserrat', sans-serif;
+$color-primary: #801023;
+$color-secondary: #a7a8a7;
+$color-dark: #050505;
+$color-light: #f2f2f2;
+$color-bg: #212121;
+$color-hover: #373c37;
+$color-whatsapp: #25D366;
+$color-whatsapp-hover: #128C7E;
+$color-border: #6d0000;
+$color-gray: #808080;
+$color-gray-light: gray;
+
+
+* {
+  font-family: $font-main;
+  text-decoration: none;
+  list-style: none;
+}
 
 body {
-  background-color: $bg-color;
-  color: $text-color;
+  margin: 0;
+  background-color: $color-bg;
 }
 
 a {
-  color: $primary-color;
+  color: $color-primary;
+}
+
+.header {
+  background-color: $color-dark;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.2);
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+
+  .container-logo {
+    position: relative;
+    margin-top: 5%;
+    background-color: $color-hover;
+    width: 100%;
+    text-align: center;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: $color-secondary;
+
+    a {
+      display: block;
+      padding: 20px;
+
+      &:hover {
+        background-color: #292929;
+        color: $color-secondary;
+      }
+    }
+  }
+
+  .logo {
+    float: left;
+    font-size: 10px;
+    text-align: center;
+    padding: 10px 20px;
+  }
+
+  .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height 0.5s ease-out;
+  }
+
+  .menu-icon {
+    padding: 28px 20px;
+    position: relative;
+    float: right;
+    cursor: pointer;
+
+    .nav-icon {
+      background-color: $color-gray;
+      display: block;
+      width: 18px;
+      height: 2px;
+      position: relative;
+      transition: background-color 0.5s ease-out;
+
+      &::before,
+      &::after {
+        background-color: $color-gray-light;
+        content: "";
+        display: block;
+        height: 100%;
+        width: 100%;
+        transition: all 0.5s ease-out;
+        position: absolute;
+      }
+
+      &::before {
+        top: 5px;
+      }
+
+      &::after {
+        top: -5px;
+      }
+    }
+  }
+
+  .menu-btn {
+    display: none;
+
+    &:checked ~ .menu {
+      max-height: 250px;
+    }
+
+    &:checked ~ .menu-icon .nav-icon {
+      background-color: transparent;
+
+      &::before {
+        transform: rotate(-45deg);
+        top: 0;
+      }
+
+      &::after {
+        transform: rotate(45deg);
+        top: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 48em) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none !important;
+    display: block;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
+
+.a .logo {
+  text-decoration: none;
+  color: $color-primary;
+  font-size: 2rem;
+  font-weight: 700;
+  display: block;
+  float: left;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+
+.wrap-title-portrait {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 10%;
+}
+
+.portrait {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1%;
+  padding: 1%;
+}
+
+.title-container {
+  color: $color-secondary;
+  margin: 1%;
+  padding: 1%;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  border-radius: 5px;
+
+  h1 {
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+    color: $color-secondary;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .title-container {
+    flex-direction: column;
+  }
+}
+
+
+.bio-text,
+.hero-img {
+  border-radius: 5px;
+  margin: 1%;
+  padding: 1%;
+  position: relative;
+}
+
+.bio-text {
+  width: 100%;
+  display: block;
+}
+
+.hero-img {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: flex-end;
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+}
+
+.hero-text p {
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .wrap-button-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-img {
+    width: 100%;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+  }
+}
+
+
+.whatsapp-button,
+.go-to-button,
+.footer-btn {
+  border: none;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 1%;
+  position: relative;
+  width: fit-content;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.whatsapp-button {
+  background-color: $color-whatsapp;
+  color: white;
+
+  &:hover {
+    background-color: $color-whatsapp-hover;
+  }
+}
+
+.go-to-button {
+  background-color: $color-secondary;
+  border: solid 1px $color-border;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: $color-primary;
+  display: block;
+
+  &:hover {
+    background-color: $color-hover;
+    color: $color-secondary !important;
+  }
+}
+
+.logo-button:hover {
+  color: $color-secondary !important;
+}
+
+
+.footer {
+  background-color: $color-light;
+  padding: 1%;
+  margin: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  margin-top: auto;
+  color: #333;
+  font-size: 14px;
+  font-weight: 400;
+
+  p {
+    font-size: 1rem;
+  }
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    margin: 0 10px;
+  }
+}
+
+.footer-btn:hover {
+  background-color: $color-hover;
+  color: $color-secondary;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.social-icon {
+  width: 45px;
+  height: 45px;
+  margin: 0;
+  padding: 1%;
+
+  &:hover {
+    background-color: $color-primary;
+    border-radius: 5px;
+  }
 }
