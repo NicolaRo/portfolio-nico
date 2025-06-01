@@ -324,7 +324,7 @@ a {
     display: flex;
     flex-direction: column;
     position:relative;
-    width: 100%;
+    width: auto;
     height: auto;
     margin-top: auto;
     color: #333;
