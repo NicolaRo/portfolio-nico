@@ -1,0 +1,325 @@
+// Variabili globali
+$primary-color: #801023;
+$dark-bg: #212121;
+$light-bg: #f2f2f2;
+$header-bg: #050505;
+$hover-bg: #292929;
+$hover-color: #a7a8a7;
+$menu-bg: #a7a8a7;
+$nav-icon-color: #808080;
+$green: #006d35;
+$green-hover: #00cd78;
+$blue: #004a6d;
+$blue-hover: #0070cd;
+$red: #6d0000;
+$red-hover: #cd0000;
+$text-light: #edeaea;
+$box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.2);
+
+$font-main: 'Montserrat', sans-serif;
+$font-alt: Arial, Helvetica, sans-serif;
+
+// Reset & global
+* {
+  font-family: $font-main;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  background-color: $dark-bg;
+}
+
+a {
+  color: $primary-color;
+}
+
+.header {
+  background-color: $header-bg;
+  box-shadow: $box-shadow;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+
+  .container-logo {
+    position: relative;
+    margin-top: 5%;
+    background-color: #373c37;
+    text-align: center;
+    width: 100%;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    background-color: $menu-bg;
+
+    a {
+      display: block;
+      padding: 20px;
+
+      &:hover {
+        background-color: $hover-bg;
+        color: $hover-color;
+      }
+    }
+  }
+
+  .logo {
+    float: left;
+    font-size: 10px;
+    text-align: center;
+    padding: 10px 20px;
+  }
+
+  .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height 0.5s ease-out;
+  }
+
+  .menu-icon {
+    padding: 28px 20px;
+    float: right;
+    position: relative;
+    cursor: pointer;
+
+    .nav-icon {
+      background-color: $nav-icon-color;
+      display: block;
+      width: 18px;
+      height: 2px;
+      position: relative;
+      transition: background-color 0.5s ease-out;
+
+      &::before,
+      &::after {
+        background-color: $nav-icon-color;
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transition: all 0.5s ease-out;
+      }
+
+      &::before {
+        top: 5px;
+      }
+
+      &::after {
+        top: -5px;
+      }
+    }
+  }
+
+  .menu-btn {
+    display: none;
+
+    &:checked {
+      ~ .menu {
+        max-height: 250px;
+      }
+
+      ~ .menu-icon .nav-icon {
+        background-color: transparent;
+
+        &::before {
+          transform: rotate(-45deg);
+          top: 0;
+        }
+
+        &::after {
+          transform: rotate(45deg);
+          top: 0;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 48em) {
+    li {
+      float: left;
+    }
+
+    li a {
+      padding: 20px 30px;
+    }
+
+    .menu {
+      clear: none;
+      float: right;
+      max-height: none !important;
+      display: block;
+    }
+
+    .menu-icon {
+      display: none;
+    }
+  }
+}
+
+.a {
+  .logo {
+    text-decoration: none;
+    color: $primary-color;
+    font-size: 2rem;
+    font-weight: 700;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.CV-hero-master {
+  background-color: rgba(132, 134, 135, 0.467);
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  justify-content: left;
+  align-items: center;
+  text-align: left;
+  position: relative;
+  padding: 1%;
+  margin-top: 5%;
+  border-radius: 5px;
+  font-family: $font-alt;
+
+  @media screen and (min-width: 400px) and (max-width: 800px) {
+    width: 80%;
+    margin-top: 10%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s;
+  }
+}
+
+.DEPYL-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1%;
+
+  @media screen and (max-width: 650px) {
+    flex-direction: column;
+    width: 100%;
+    margin: 1%;
+  }
+}
+
+.DEPYL-Landingpage-scrolling-preview {
+  height: 100%;
+  position: relative;
+  width: 65%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 1%;
+  padding: 1%;
+}
+
+.project-title {
+  font-family: $font-alt;
+  font-size: 24px;
+  font-weight: bold;
+  color: $text-light;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  margin-bottom: 10px;
+}
+
+.University-logo {
+  width: auto;
+  height: auto;
+  margin-bottom: 20px;
+
+  h2 {
+    font-family: $font-alt;
+    font-size: 20px;
+    font-weight: bold;
+    color: $text-light; // fallback, as gradient on text requires extra work
+  }
+}
+
+.project-layout {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  width: 100%;
+  height: auto;
+}
+
+.Project-description {
+  margin: 1%;
+  padding: 1%;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+  text-align: left;
+  font-size: 14px;
+  color: $text-light;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.next-project-btn {
+  background-color: $green;
+  color: $text-light;
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: $font-main;
+  margin-top: 1em;
+
+  &:hover {
+    background-color: $green-hover;
+  }
+}
+
+.Green-Earth-preview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2% auto;
+  max-width: 100%;
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+}
+
+.macbook-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; // 16:9 aspect ratio
+  background-color: #000;
+  border-radius: 10px;
+  overflow: hidden;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+}
