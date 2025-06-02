@@ -1,0 +1,339 @@
+/* Variabili */
+$font-stack: 'Montserrat', sans-serif;
+$bg-dark: #212121;
+$link-color: #801023;
+$header-bg: #050505;
+$container-bg: #373c37;
+$menu-bg: #a7a8a7;
+$hover-bg: #292929;
+$nav-icon: #808080;
+$nav-icon-hover: gray;
+$hero-bg: rgba(132, 134, 135, 0.467);
+$skills-bar-bg: #02525bc1;
+$skills-bar-front: #ffcc33;
+$skills-bar-back: #a6cfe3;
+$skills-bar-color: #f3565b;
+$btn-bg: #ffffff;
+$btn-text: #6d0000;
+$footer-bg: #f2f2f2;
+$footer-color: #333;
+$card-bg: #4f5051;
+$tag-bg: #6d0000;
+$scrollbar-color: #b22424;
+
+/* Reset */
+* {
+  font-family: $font-stack;
+}
+body {
+  margin: 0;
+  background-color: $bg-dark;
+}
+a {
+  color: $link-color;
+}
+
+/* Header */
+.header {
+  background-color: $header-bg;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.2);
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+
+  .container-logo {
+    position: relative;
+    margin-top: 5%;
+    background-color: $container-bg;
+    width: 100%;
+    text-align: center;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    overflow: hidden;
+    background-color: $menu-bg;
+
+    a {
+      display: block;
+      padding: 20px;
+      text-decoration: none;
+
+      &:hover {
+        background-color: $hover-bg;
+      }
+    }
+  }
+
+  .logo {
+    float: left;
+    font-size: 10px;
+    text-align: center;
+    padding: 10px 20px;
+  }
+
+  .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .5s ease-out;
+  }
+
+  .menu-icon {
+    padding: 28px 20px;
+    position: relative;
+    float: right;
+    cursor: pointer;
+
+    .nav-icon {
+      background-color: $nav-icon;
+      display: block;
+      width: 18px;
+      height: 2px;
+      position: relative;
+      transition: background-color .5s ease-out;
+
+      &::before,
+      &::after {
+        background-color: $nav-icon-hover;
+        content: "";
+        display: block;
+        height: 100%;
+        width: 100%;
+        transition: all .5s ease-out;
+        position: absolute;
+      }
+      &::before {
+        top: 5px;
+      }
+      &::after {
+        top: -5px;
+      }
+    }
+  }
+
+  .menu-btn {
+    display: none;
+
+    &:checked ~ .menu {
+      max-height: 250px;
+    }
+
+    &:checked ~ .menu-icon .nav-icon {
+      background-color: transparent;
+
+      &::before {
+        transform: rotate(-45deg);
+        top: 0;
+      }
+      &::after {
+        transform: rotate(45deg);
+        top: 0;
+      }
+    }
+  }
+
+  @media (min-width: 48em) {
+    li {
+      float: left;
+
+      a {
+        padding: 20px 30px;
+      }
+    }
+    .menu {
+      clear: none;
+      float: right;
+      max-height: none !important;
+      display: block;
+    }
+    .menu-icon {
+      display: none;
+    }
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: $scrollbar-color;
+  border-radius: 25px;
+}
+::-webkit-scrollbar-thumb {
+  background: $scrollbar-color;
+  border-radius: 25px;
+  &:hover {
+    background: $scrollbar-color;
+  }
+}
+
+/* Hero Section */
+.hero {
+  background-color: $hero-bg;
+  padding: 80px 20px;
+  text-align: center;
+  color: white;
+
+  h1 {
+    font-size: 3em;
+    margin: 0.5em 0;
+  }
+
+  p {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+  }
+
+  .btn {
+    background-color: $btn-bg;
+    color: $btn-text;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: darken($btn-bg, 10%);
+    }
+  }
+}
+
+/* About Section */
+.about {
+  padding: 60px 20px;
+  color: white;
+  background-color: $bg-dark;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .content {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+}
+
+
+.skills {
+  background-color: $bg-dark;
+  padding: 60px 20px;
+  color: white;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .skill {
+    margin-bottom: 20px;
+
+    .bar {
+      background-color: $skills-bar-back;
+      border-radius: 25px;
+      overflow: hidden;
+
+      .progress {
+        background-color: $skills-bar-front;
+        height: 20px;
+        width: 0;
+        color: $skills-bar-color;
+        text-align: right;
+        padding-right: 10px;
+        transition: width 1s ease-in-out;
+      }
+    }
+  }
+}
+
+.portfolio {
+  background-color: $bg-dark;
+  color: white;
+  padding: 60px 20px;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+
+    .card {
+      background-color: $card-bg;
+      padding: 20px;
+      border-radius: 10px;
+
+      h3 {
+        margin-top: 0;
+      }
+
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+
+        span {
+          background-color: $tag-bg;
+          color: white;
+          padding: 5px 10px;
+          border-radius: 20px;
+          font-size: 0.8em;
+        }
+      }
+    }
+  }
+}
+
+.contact {
+  padding: 60px 20px;
+  color: white;
+  background-color: $bg-dark;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    input,
+    textarea {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    button {
+      background-color: $btn-bg;
+      color: $btn-text;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+
+      &:hover {
+        background-color: darken($btn-bg, 10%);
+      }
+    }
+  }
+}
+
+footer {
+  background-color: $footer-bg;
+  color: $footer-color;
+  text-align: center;
+  padding: 20px;
+}
