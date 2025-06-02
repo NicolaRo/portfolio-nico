@@ -144,9 +144,6 @@ a {
   border-radius: 5px;
 }
 
-/*.hero-img:hover {
-  transform: scale(1.05);
-} */
 .wrap-education-hero {
   width: 100%;
   height: auto;
@@ -157,7 +154,6 @@ a {
   flex-direction: column;
   position:relative;
   justify-content: flex-start;
-  align-items: left;
   text-align: left;
   transition: transform 0.5s;
   color:#a7a8a7;
@@ -169,7 +165,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: left;
+  align-items: flex-start;
   position: relative;
   width: 100%;
   height: auto;
@@ -184,7 +180,7 @@ a {
   flex-direction: column;
   justify-content: left;
   text-align: left;
-  align-items: left;
+  align-items: flex-start;
   padding: 1%;
   margin: 1%;
   border-radius: 5px;
@@ -198,7 +194,6 @@ a {
     padding: 1%;
     position: relative;
     justify-content: left;
-    align-items: center;
     text-align: left;
     transition: transform 0.5s;
   }
@@ -278,7 +273,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: left;
+  align-items: flex-start;
   position: relative;
   width: 100%;
   height: auto;
@@ -287,7 +282,7 @@ a {
 @media screen and (min-width: 650px) {
   .institute-title {
     flex-direction: column;
-    align-items: left;
+    align-items: flex-start;
     width: 100%;
     height: auto;
     margin: 1%;
@@ -297,14 +292,12 @@ a {
     text-align: left;
     transition: transform 0.5s;
   }
-  
 }
 
 .Master-description {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: left;
   position: relative;
   width: fit-content;
   height: auto; 
@@ -362,7 +355,6 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: left;
-  align-items: left;
   position: relative;
   width: 95%;
   height: auto;
@@ -401,15 +393,14 @@ a {
     justify-content: left;
     position: relative;
     margin: 1%;
-    height: fit content;
+    height: fit-content;
     border-radius: 5px;
     color:#FFF;
     width:95%;
 }
 @media screen and (min-width: 650px) {
   .Skills_1-2, .Skills_2-2 {
-    flex-direction: column; 
-    align-items: left; 
+    flex-direction: column;  
     width:100%;
     height: auto;
     margin: 1%;
@@ -499,8 +490,7 @@ a {
 }
 @media screen and (max-width: 650px) {
   .my-projects {
-    flex-direction: column; /* Modifica per disporre in colonna su schermi stretti */
-    align-items: left; /* Allineamento al centro */
+    flex-direction: column;
     width: 96%;
     height: fit-content;
     margin: 1%;
@@ -552,12 +542,12 @@ a {
 
 .projects-btn{
   background-color: #ffffff;
-  width: 50%fit-content;
+  width: fit-content;
   color: #6d0000;
   padding: 5%;
   margin:1%;
   border: solid 2px #6d0000;
-  box-shadow: #292929;
+  box-shadow: rgba(109, 0, 0, 0.4) 0 0 0;
   border-radius: 5px;
   cursor: pointer;
   text-decoration: none;
@@ -565,7 +555,7 @@ a {
   font-size: 16px;
   font-weight: bold;
   margin: 5px;
-  display: inline-flexbox;
+  display: flex;
   flex-direction: column;
   transition: background-color 0.3s ease; 
 }
@@ -574,14 +564,13 @@ a {
   color: #6d0000;
   padding: 10px 20px;
   border: solid 2px #6d0000;
-  box-shadow: #292929;
+  box-shadow: rgba(109, 0, 0, 0.4) 0 0 0;
   border-radius: 5px;
   cursor: pointer;
   text-decoration: none;
   font-size: 16px;
   font-weight: bold;
   margin: 5px;
-  display: inline-flexbox;
   text-align: center;
   transition: background-color 0.3s ease; 
 }
@@ -623,7 +612,7 @@ html {
       transform: scale(0.9);
       display:flex;
       flex-direction: row;
-      align-items: left;
+      align-items: flex-start;
       overflow-x: scroll;
       width:100%;
 
@@ -663,7 +652,7 @@ html {
   display: flex;
   flex-direction: row;
   justify-content: left;
-  align-items: left;
+  align-items: flex-start;
   margin: 1%;
   width:fit-content;
   height: fit-content;
