@@ -1,0 +1,282 @@
+@charset "UTF-8";
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #212121;
+}
+
+a {
+  color: #801023;
+}
+
+.header {
+  background-color: #050505;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.2);
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+}
+.header .container-logo {
+  position: relative;
+  margin-top: 5%;
+  background-color: #373c37;
+  width: 100%;
+  text-align: center;
+}
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  overflow: hidden;
+  background-color: #a7a8a7;
+}
+.header ul a {
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+}
+.header ul a:hover {
+  background-color: #292929;
+}
+.header .logo {
+  float: left;
+  font-size: 10px;
+  text-align: center;
+  padding: 10px 20px;
+}
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.5s ease-out;
+}
+.header .menu-icon {
+  padding: 28px 20px;
+  position: relative;
+  float: right;
+  cursor: pointer;
+}
+.header .menu-icon .nav-icon {
+  background-color: #808080;
+  display: block;
+  width: 18px;
+  height: 2px;
+  position: relative;
+  transition: background-color 0.5s ease-out;
+}
+.header .menu-icon .nav-icon::before, .header .menu-icon .nav-icon::after {
+  background-color: gray;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  transition: all 0.5s ease-out;
+  position: absolute;
+}
+.header .menu-icon .nav-icon::before {
+  top: 5px;
+}
+.header .menu-icon .nav-icon::after {
+  top: -5px;
+}
+.header .menu-btn {
+  display: none;
+}
+.header .menu-btn:checked ~ .menu {
+  max-height: 250px;
+}
+.header .menu-btn:checked ~ .menu-icon .nav-icon {
+  background-color: transparent;
+}
+.header .menu-btn:checked ~ .menu-icon .nav-icon::before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+.header .menu-btn:checked ~ .menu-icon .nav-icon::after {
+  transform: rotate(45deg);
+  top: 0;
+}
+@media (min-width: 48em) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none !important;
+    display: block;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
+
+::-webkit-scrollbar {
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #b22424;
+  border-radius: 25px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b22424;
+  border-radius: 25px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b22424;
+}
+
+.hero {
+  background-color: rgba(132, 134, 135, 0.467);
+  padding: 80px 20px;
+  text-align: center;
+  color: white;
+}
+.hero h1 {
+  font-size: 3em;
+  margin: 0.5em 0;
+}
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+.hero .btn {
+  background-color: #ffffff;
+  color: #6d0000;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.hero .btn:hover {
+  background-color: #e6e6e6;
+}
+
+.about {
+  padding: 60px 20px;
+  color: white;
+  background-color: #212121;
+}
+.about h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.about .content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.CV-Page-title  {
+  width: auto;
+}
+
+.skills {
+  background-color: #212121;
+  padding: 60px 20px;
+  color: white;
+}
+.skills h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.skills .skill {
+  margin-bottom: 20px;
+}
+.skills .skill .bar {
+  background-color: #a6cfe3;
+  border-radius: 25px;
+  overflow: hidden;
+}
+.skills .skill .bar .progress {
+  background-color: #ffcc33;
+  height: 20px;
+  width: 0;
+  color: #f3565b;
+  text-align: right;
+  padding-right: 10px;
+  transition: width 1s ease-in-out;
+}
+
+.portfolio {
+  background-color: #212121;
+  color: white;
+  padding: 60px 20px;
+}
+.portfolio h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.portfolio .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.portfolio .grid .card {
+  background-color: #4f5051;
+  padding: 20px;
+  border-radius: 10px;
+}
+.portfolio .grid .card h3 {
+  margin-top: 0;
+}
+.portfolio .grid .card .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.portfolio .grid .card .tags span {
+  background-color: #6d0000;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.8em;
+}
+
+.contact {
+  padding: 60px 20px;
+  color: white;
+  background-color: #212121;
+}
+.contact h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.contact form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.contact form input,
+.contact form textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+.contact form button {
+  background-color: #ffffff;
+  color: #6d0000;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+.contact form button:hover {
+  background-color: #e6e6e6;
+}
+
+footer {
+  background-color: #f2f2f2;
+  color: #333;
+  text-align: center;
+  padding: 20px;
+}/*# sourceMappingURL=CV-Style.css.map */
