@@ -1,4 +1,4 @@
-// 🎨 Variables
+
 $font-family: "Montserrat", sans-serif;
 $color-text: #a7a8a7;
 $color-primary: #801023;
@@ -12,14 +12,12 @@ $color-border: #60000d;
 $color-border-dark: #6d0000;
 $gray: #868585;
 
-// 📦 Global Styles
 * {
   font-family: $font-family;
   text-decoration: none;
   list-style: none;
   color: $color-text;
 }
-
 body {
   margin: 0;
   background-color: $color-background;
