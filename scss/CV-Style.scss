@@ -214,9 +214,13 @@ a {
   }
 }
 
-.CV-Page-title {
+.CV-Page-title {
     width: auto;
-}
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+  
 .skills {
   background-color: $bg-dark;
   padding: 60px 20px;
