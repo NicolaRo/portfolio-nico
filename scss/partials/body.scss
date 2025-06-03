@@ -1,7 +1,3 @@
-@use 'partials/header.scss';
-@use 'partials/footer.scss';
-@use 'partials/body.scss';
-
 $font-family: "Montserrat", sans-serif;
 $color-text: #a7a8a7;
 $color-primary: #801023;
@@ -14,3 +10,18 @@ $color-footer-hover: #373c37;
 $color-border: #60000d;
 $color-border-dark: #6d0000;
 $gray: #868585;
+
+* {
+    font-family: $font-main;
+    text-decoration: none;
+    list-style: none;
+  }
+  
+  body {
+    margin: 0;
+    background-color: $color-bg;
+  }
+
+  a {
+    color: $color-primary;
+  }

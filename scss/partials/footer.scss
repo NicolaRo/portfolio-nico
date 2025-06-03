@@ -1,0 +1,63 @@
+$font-family: "Montserrat", sans-serif;
+$color-text: #a7a8a7;
+$color-primary: #801023;
+$color-background: #212121;
+$color-dark: #050505;
+$color-lightgray: #f2f2f2;
+$color-green: #25d366;
+$color-green-hover: #128c7e;
+$color-footer-hover: #373c37;
+$color-border: #60000d;
+$color-border-dark: #6d0000;
+$gray: #868585;
+
+.footer {
+    background-color: $color-light;
+    padding: 1%;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    margin-top: auto;
+    color: #333;
+    font-size: 14px;
+    font-weight: 400;
+  
+    p {
+      font-size: 1rem;
+    }
+  }
+  
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  
+    li {
+      margin: 0 10px;
+    }
+  }
+  
+  .footer-btn:hover {
+    background-color: $color-hover;
+    color: $color-secondary;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .social-icon {
+    width: 45px;
+    height: 45px;
+    margin: 0;
+    padding: 1%;
+  
+    &:hover {
+      background-color: $color-primary;
+      border-radius: 5px;
+    }
+  }
+  

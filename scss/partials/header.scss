@@ -1,0 +1,152 @@
+$font-main: 'Montserrat', sans-serif;
+$color-primary: #801023;
+$color-secondary: #a7a8a7;
+$color-dark: #050505;
+$color-light: #f2f2f2;
+$color-bg: #212121;
+$color-hover: #373c37;
+$color-whatsapp: #25D366;
+$color-whatsapp-hover: #128C7E;
+$color-border: #6d0000;
+$color-gray: #808080;
+$color-gray-light: gray;
+
+
+.header {
+  background-color: $color-dark;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.2);
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+
+  .container-logo {
+    position: relative;
+    margin-top: 5%;
+    background-color: $color-hover;
+    width: 100%;
+    text-align: center;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: $color-secondary;
+
+    a {
+      display: block;
+      padding: 20px;
+
+      &:hover {
+        background-color: #292929;
+        color: $color-secondary;
+      }
+    }
+  }
+
+  .logo {
+    float: left;
+    font-size: 10px;
+    text-align: center;
+    padding: 10px 20px;
+  }
+
+  .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height 0.5s ease-out;
+  }
+
+  .menu-icon {
+    padding: 28px 20px;
+    position: relative;
+    float: right;
+    cursor: pointer;
+
+    .nav-icon {
+      background-color: $color-gray;
+      display: block;
+      width: 18px;
+      height: 2px;
+      position: relative;
+      transition: background-color 0.5s ease-out;
+
+      &::before,
+      &::after {
+        background-color: $color-gray-light;
+        content: "";
+        display: block;
+        height: 100%;
+        width: 100%;
+        transition: all 0.5s ease-out;
+        position: absolute;
+      }
+
+      &::before {
+        top: 5px;
+      }
+
+      &::after {
+        top: -5px;
+      }
+    }
+  }
+
+  .menu-btn {
+    display: none;
+
+    &:checked ~ .menu {
+      max-height: 250px;
+    }
+
+    &:checked ~ .menu-icon .nav-icon {
+      background-color: transparent;
+
+      &::before {
+        transform: rotate(-45deg);
+        top: 0;
+      }
+
+      &::after {
+        transform: rotate(45deg);
+        top: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 48em) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none !important;
+    display: block;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
+
+.a .logo {
+  text-decoration: none;
+  color: $color-primary;
+  font-size: 2rem;
+  font-weight: 700;
+  display: block;
+  float: left;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
