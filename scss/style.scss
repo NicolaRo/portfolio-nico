@@ -15,8 +15,8 @@ $color-border: #60000d;
 $color-border-dark: #6d0000;
 $gray: #868585;
 
-@use 'pages/index-style.scss';
-@use 'pages/CV-Style.scss';
-@use 'pages/Depyl_Project.scss';
-@use 'pages/Green-Earth_project.scss';
-@use 'pages/Contact-Me-Style.scss';
+@use "pages/index-style";
+@use "pages/CV-Style";
+@use "pages/Depyl_Project";
+@use "pages/Green-Earth_project";
+@use "pages/Contact-Me-Style";

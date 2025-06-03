@@ -1,4 +1,4 @@
-.CV-hero-container {
+.CV .CV-hero-container {
   padding: 1%;
   margin: 0;
   display: flex;
@@ -7,8 +7,7 @@
   height: auto;
   border-radius: 5px;
 }
-
-.wrap-education-hero {
+.CV .wrap-education-hero {
   width: 100%;
   height: auto;
   margin-top: 200%;
@@ -23,8 +22,7 @@
   color: #a7a8a7;
   font-size: 30px;
 }
-
-.CV-Page-title {
+.CV .CV-Page-title {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -35,8 +33,7 @@
   margin-top: 1%;
   text-align: left;
 }
-
-.CV-hero-master {
+.CV .CV-hero-master {
   background-color: rgba(132, 134, 135, 0.467);
   display: flex;
   height: auto;
@@ -48,9 +45,8 @@
   margin: 1%;
   border-radius: 5px;
 }
-
 @media screen and (min-width: 650px) {
-  .CV-hero-master {
+  .CV .CV-hero-master {
     display: block;
     height: -moz-fit-content;
     height: fit-content;
@@ -62,7 +58,7 @@
     transition: transform 0.5s;
   }
 }
-.hero-logo {
+.CV .hero-logo {
   display: flex;
   flex-direction: row;
   justify-content: left;
@@ -73,8 +69,7 @@
   margin: 1%;
   padding: 1%;
 }
-
-.macbook-wrapper-container {
+.CV .macbook-wrapper-container {
   position: relative;
   width: -moz-fit-content;
   width: fit-content;
@@ -88,20 +83,17 @@
   align-items: center;
   text-align: center;
 }
-
-.macbook-wrapper {
+.CV .macbook-wrapper {
   position: relative;
   width: 80%;
   height: auto;
 }
-
-.macbook-img {
+.CV .macbook-img {
   width: 100%;
   height: auto;
   display: block;
 }
-
-.gif-overlay {
+.CV .gif-overlay {
   position: absolute;
   top: 3%;
   left: 10%;
@@ -110,14 +102,12 @@
   border-radius: 5px;
   pointer-events: none;
 }
-
-.macbook-wrapper:hover .gif-overlay {
+.CV .macbook-wrapper:hover .gif-overlay {
   opacity: 1;
   z-index: 4;
   box-shadow: 0 0 10px #000;
 }
-
-.start2Impact-container {
+.CV .start2Impact-container {
   display: inline-flex;
   flex-direction: row;
   justify-content: left;
@@ -128,9 +118,8 @@
   height: -moz-fit-content;
   height: fit-content;
 }
-
 @media screen and (min-width: 650px) {
-  .start2Impact-container {
+  .CV .start2Impact-container {
     flex-direction: column;
     align-items: flex-start;
     width: auto;
@@ -140,7 +129,7 @@
     padding: 1%;
   }
 }
-.institute-title {
+.CV .institute-title {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -150,9 +139,8 @@
   height: auto;
   font-size: larger;
 }
-
 @media screen and (min-width: 650px) {
-  .institute-title {
+  .CV .institute-title {
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
@@ -165,7 +153,7 @@
     transition: transform 0.5s;
   }
 }
-.Master-description {
+.CV .Master-description {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -174,8 +162,7 @@
   width: fit-content;
   height: auto;
 }
-
-.University-logo {
+.CV .University-logo {
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
@@ -187,9 +174,8 @@
   margin: 1%;
   padding: 1%;
 }
-
 @media screen and (max-width: 650px) {
-  .University-logo {
+  .CV .University-logo {
     flex-direction: column;
     align-items: center;
     width: 100%;
@@ -203,15 +189,14 @@
     transition: transform 0.5s;
   }
 }
-.University-logo h2 {
+.CV .University-logo h2 {
   font-size: 20px;
   font-weight: bold;
   color: #fff;
   width: -moz-fit-content;
   width: fit-content;
 }
-
-.Skills-container {
+.CV .Skills-container {
   background-color: #373c37;
   padding: 1%;
   margin: 1%;
@@ -224,8 +209,7 @@
   height: fit-content;
   border-radius: 5px;
 }
-
-.skills-bars-container {
+.CV .skills-bars-container {
   display: flex;
   flex-direction: row;
   justify-content: left;
@@ -236,17 +220,16 @@
   padding: 1%;
   border-radius: 5px;
 }
-
 @media screen and (max-width: 400px) {
-  .skills-bars-container {
+  .CV .skills-bars-container {
     flex-direction: column;
     align-items: flex-start;
   }
-  .skills-bars-container {
+  .CV .skills-bars-container {
     order: 2;
   }
 }
-.skills-bar {
+.CV .skills-bar {
   display: flex;
   justify-content: left;
   align-items: center;
@@ -256,8 +239,7 @@
   padding: 2%;
   margin: 2%;
 }
-
-.Skills_1-2, .Skills_2-2 {
+.CV .Skills_1-2, .CV .Skills_2-2 {
   background-color: #373c37;
   padding: 1%;
   display: flex;
@@ -272,9 +254,8 @@
   color: #FFF;
   width: 95%;
 }
-
 @media screen and (min-width: 650px) {
-  .Skills_1-2, .Skills_2-2 {
+  .CV .Skills_1-2, .CV .Skills_2-2 {
     flex-direction: column;
     width: 100%;
     height: auto;
@@ -286,17 +267,15 @@
     transition: transform 0.5s;
   }
 }
-.Skills_2-2 {
+.CV .Skills_2-2 {
   order: 1;
 }
-
-.skill-icon {
+.CV .skill-icon {
   width: 50px;
   height: 50px;
   margin-right: 10px;
 }
-
-.bar {
+.CV .bar {
   background-color: rgba(2, 82, 91, 0.7568627451);
   width: 100%;
   padding: 3px;
@@ -315,8 +294,7 @@
   font-weight: bold;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
-
-.bar::before {
+.CV .bar::before {
   content: attr(data-skill);
   background-color: #f3565b;
   display: inline-block;
@@ -327,36 +305,28 @@
   -moz-animation: load 4s 2s;
   -o-animation: load 4s 2s;
 }
-
-.bar.front::before {
+.CV .bar.front::before {
   background-color: #ffcc33;
 }
-
-.bar.back::before {
+.CV .bar.back::before {
   background-color: #a6cfe3;
 }
-
-.bar.learning::before {
+.CV .bar.learning::before {
   width: calc(20% - 10px);
 }
-
-.bar.basic::before {
+.CV .bar.basic::before {
   width: calc(40% - 10px);
 }
-
-.bar.intermediate::before {
+.CV .bar.intermediate::before {
   width: calc(60% - 10px);
 }
-
-.bar.advanced::before {
+.CV .bar.advanced::before {
   width: calc(80% - 10px);
 }
-
-.bar.expert::before {
+.CV .bar.expert::before {
   width: calc(100% - 10px);
 }
-
-.my-projects {
+.CV .my-projects {
   display: flex;
   flex-direction: row;
   overflow-x: auto;
@@ -366,9 +336,8 @@
   text-align: left;
   background-color: #373c37;
 }
-
 @media screen and (max-width: 650px) {
-  .my-projects {
+  .CV .my-projects {
     flex-direction: column;
     width: 96%;
     height: -moz-fit-content;
@@ -381,22 +350,20 @@
     transition: transform 0.5s;
   }
 }
-.projecct-img {
+.CV .projecct-img {
   width: 25%;
   height: auto;
   margin-right: 10px;
   padding: 1%;
   transition: transform 0.5s;
 }
-
-.my-projects-hero {
+.CV .my-projects-hero {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
-.my-projects-hero-img {
+.CV .my-projects-hero-img {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -405,9 +372,8 @@
   padding: 1%;
   transition: transform 0.5s;
 }
-
 @media screen and (max-width: 400px) {
-  .my-projects-hero-img {
+  .CV .my-projects-hero-img {
     width: -moz-fit-content;
     width: fit-content;
     height: auto;
@@ -422,7 +388,7 @@
     transition: transform 0.5s;
   }
 }
-.projects-btn {
+.CV .projects-btn {
   background-color: #ffffff;
   width: -moz-fit-content;
   width: fit-content;
@@ -442,8 +408,7 @@
   flex-direction: column;
   transition: background-color 0.3s ease;
 }
-
-.btn-master {
+.CV .btn-master {
   background-color: #ffffff;
   color: #6d0000;
   padding: 10px 20px;
@@ -458,35 +423,28 @@
   text-align: center;
   transition: background-color 0.3s ease;
 }
-
-.btn-master:hover {
+.CV .btn-master:hover {
   background-color: rgba(255, 255, 255, 0.5019607843);
   display: block;
 }
-
-html {
+.CV html {
   scroll-behavior: smooth;
 }
-
-::-webkit-scrollbar {
+.CV ::-webkit-scrollbar {
   height: 8px;
 }
-
-::-webkit-scrollbar-track {
+.CV ::-webkit-scrollbar-track {
   background: #b22424;
   border-radius: 25px;
 }
-
-::-webkit-scrollbar-thumb {
+.CV ::-webkit-scrollbar-thumb {
   background: #b22424;
   border-radius: 25px;
 }
-
-::-webkit-scrollbar-thumb:hover {
+.CV ::-webkit-scrollbar-thumb:hover {
   background: #b22424;
 }
-
-.card-container {
+.CV .card-container {
   display: flex;
   overflow-x: auto;
   width: 100%;
@@ -497,9 +455,8 @@ html {
   box-sizing: border-box;
   scroll-snap-type: x mandatory;
 }
-
 @media screen and (max-width: 650px) {
-  .card-container {
+  .CV .card-container {
     transform: scale(0.9);
     display: flex;
     flex-direction: row;
@@ -508,7 +465,7 @@ html {
     width: 100%;
   }
 }
-.card {
+.CV .card {
   background-color: #4f5051;
   background-size: cover;
   background-position: center;
@@ -528,8 +485,7 @@ html {
   min-width: 250px;
   scroll-snap-align: start;
 }
-
-.card .image {
+.CV .card .image {
   height: 150px;
   width: 150px;
   padding: 4px;
@@ -537,8 +493,7 @@ html {
   border-radius: 50%;
   align-items: center;
 }
-
-.tag-container {
+.CV .tag-container {
   display: flex;
   flex-direction: row;
   justify-content: left;
@@ -551,9 +506,8 @@ html {
   position: relative;
   padding: 1%;
 }
-
 @media screen and (min-width: 920px) {
-  .container .card {
+  .CV .container .card {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -562,7 +516,7 @@ html {
     margin-bottom: 20px;
   }
 }
-.image img {
+.CV .image img {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
@@ -570,8 +524,7 @@ html {
   border-radius: 50%;
   border: 5px solid #6d0000;
 }
-
-.card h2 {
+.CV .card h2 {
   margin-top: 25px;
   color: #333;
   font-size: 22px;
@@ -579,8 +532,7 @@ html {
   padding: 1%;
   margin: 1%;
 }
-
-.card .tag-container {
+.CV .card .tag-container {
   position: relative;
   width: -moz-fit-content;
   width: fit-content;
@@ -590,8 +542,7 @@ html {
   flex-direction: row;
   margin-top: 1%;
 }
-
-.card h5 {
+.CV .card h5 {
   color: #fff;
   font-weight: 800;
   background-color: #6d0000;
@@ -604,8 +555,7 @@ html {
   height: fit-content;
   text-align: center;
 }
-
-.card p {
+.CV .card p {
   margin-top: 4px;
   font-size: 18px;
   font-weight: 400;
