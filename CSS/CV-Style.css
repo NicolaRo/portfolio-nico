@@ -167,10 +167,9 @@ a {
   justify-content: flex-start;
   align-items: flex-start;
   position: relative;
-  width: 100%;
+  width: auto;
   height: auto;
   margin-top: 1%;
-  padding: 1%;
   text-align: left;
 }
 .CV-hero-master {
