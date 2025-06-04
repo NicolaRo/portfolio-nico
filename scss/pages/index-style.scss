@@ -57,6 +57,12 @@
     
 }
 
+.hero-text p {
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+
 .bio-text {
     height: auto;
     width: 100%;
@@ -80,7 +86,7 @@
     padding: 1%;
     position: relative;
 }
-.whatsapp-button {
+/*.whatsapp-button {
     background-color: #25D366;
     color: white;
     border: none;
@@ -99,27 +105,24 @@
     .whatsapp-button:hover {
         background-color: #128C7E;
         color: white;
-    }
-    .hero-img img {
-        width: 100%;
-        height: auto;
-        border-radius: 5px;
-    }
+    }*/
+
+.hero-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
     
-    .hero-text p {
-        font-size: 20px;
-        margin: 0;
-        padding: 0;
-    }
 
 .wrap-button-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    position: relative;
+
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
     .wrap-button-container {
         flex-direction: column;
         align-items: center;
