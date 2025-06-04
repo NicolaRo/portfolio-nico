@@ -2,6 +2,12 @@
 @use "partials/footer.scss";
 @use "partials/body.scss";
 
+@import 'pages/CV-Style.scss';
+@import 'pages/Contact-Me-Style.scss';
+@import 'pages/Depyl-Project.scss';
+@import 'pages/Green-Earth_project.scss';
+@import 'pages/index-style.scss';
+
 $font-family: "Montserrat", sans-serif;
 $color-text: #a7a8a7;
 $color-primary: #801023;
