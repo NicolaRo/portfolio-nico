@@ -98,7 +98,6 @@
     .wrap-button-container {
         display: flex;
         flex-direction: row;
-        justify-content: center;
         align-items: flex-start;
         position: relative;
     }
@@ -117,7 +116,7 @@
         
     }
 
-    .go-to-button {
+    .CV-go-to-button {
         background-color: #a7a8a7;
         border: solid 1px #6d0000;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -127,18 +126,35 @@
         cursor: pointer;
         font-weight: 400;
         width:fit-content;
-        display: block;
+        display: flex;
+        flex-direction: row;
         margin: 1%;
         padding: 1%;
-        position: relative;
         transition: background-color 0.3s, color 0.3s;
     }
-    .go-to-button:hover {
+    .CV-go-to-button:hover {
         background-color: #373c37;
         color: #a7a8a7 !important;
     }
     .logo-button:hover {
         color:#a7a8a7!important;
+    }
+
+    .contact-go-to-button {
+        background-color: #a7a8a7;
+        border: solid 1px #6d0000;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        color: #801023;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: 400;
+        width:fit-content;
+        display: flex;
+        flex-direction: row;
+        margin: 1%;
+        padding: 1%;
+        transition: background-color 0.3s, color 0.3s;
     }
 }
     
