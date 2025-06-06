@@ -1,0 +1,27 @@
+@use '../variables' as *;
+.footer {
+  background-color: $color-dark;
+  color: $color-light-gray;
+  padding: 3rem 1rem;
+  text-align: center;
+  .footer-links {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  .footer-btn {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  .footer-social-icons {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .social-icon {
+    width: 30px;
+  }
+}

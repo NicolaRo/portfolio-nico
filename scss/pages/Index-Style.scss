@@ -1,0 +1,104 @@
+@use 'sass:color';
+@use '../variables' as *;
+
+// --- CONTENIDO PRINCIPAL ---
+.wrap-title-portrait {
+  max-width: 800px;
+  margin: 4rem auto; // Centrado horizontal y con espacio vertical
+  padding: 0 1rem;
+  text-align: center;
+
+  h1 {
+    font-family: $font-secondary;
+    // font-size: clamp(2.5rem, 10vw, 4rem); // Tamaño de fuente adaptable
+    font-size: 4rem;
+    color: $color-dark;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%; // Imagen redonda
+    border: 5px solid $color-primary;
+    margin: 0 auto 2rem auto;
+    object-fit: cover;
+  }
+
+  .bio-text p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+}
+
+// --- BOTONES DE NAVEGACIÓN ---
+.wrap-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin: 4rem 1rem;
+}
+
+.logo-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background-color: white;
+  color: $color-dark;
+  font-weight: bold;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+
+  img {
+    width: 90px;
+  }
+
+  &:hover {
+    text-decoration: none;
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  }
+}
+
+// --- FOOTER ---
+
+.footer {
+  background-color: $color-dark;
+  color: $color-light-gray;
+  padding: 3rem 1rem;
+  text-align: center;
+
+  .footer-links {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+
+    .footer-btn {
+      color: white;
+      font-weight: bold;
+    }
+  }
+
+  .footer-social-icons {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+
+    .social-icon {
+      width: 30px;
+      transition: transform 0.2s ease;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}

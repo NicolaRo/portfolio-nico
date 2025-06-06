@@ -1,0 +1,36 @@
+.green-earth-container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.green-earth-container h2 {
+  color: #3498db;
+  margin-bottom: 15px;
+  border-bottom: 2px solid black;
+  padding-bottom: 5px;
+}
+.green-earth-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+.green-earth-container p {
+  color: #333333;
+  line-height: 1.6;
+}
+.green-earth-container .project-details {
+  margin-top: 20px;
+  color: #333333;
+}
+.green-earth-container .project-details h3 {
+  color: #3498db;
+  margin-bottom: 10px;
+}
+.green-earth-container .project-details ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}/*# sourceMappingURL=Green-Earth_project.css.map */

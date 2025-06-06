@@ -1,0 +1,45 @@
+// Depyl-Project.scss
+@use '../variables' as *;
+
+.depyl-project-container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  h2 {
+    color: $color-primary;
+    margin-bottom: 15px;
+    border-bottom: 2px solid $color-border;
+    padding-bottom: 5px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+
+  p {
+    color: $color-text;
+    line-height: 1.6;
+  }
+
+  .project-details {
+    margin-top: 20px;
+    color: $color-text;
+
+    h3 {
+      color: $color-primary;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+  }
+}

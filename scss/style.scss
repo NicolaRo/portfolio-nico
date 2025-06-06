@@ -1,24 +1,11 @@
-@use "partials/header.scss";
-@use "partials/footer.scss";
-@use "partials/body.scss";
+// index-style.scss
+@use './variables' as *;
 
-@import 'pages/CV-Style.scss';
-@import 'pages/Contact-Me-Style.scss';
-@import 'pages/Depyl-Project.scss';
-@import 'pages/Green-Earth_project.scss';
-@import 'pages/index-style.scss';
-
-$font-family: "Montserrat", sans-serif;
-$color-text: #a7a8a7;
-$color-primary: #801023;
-$color-background: #212121;
-$color-dark: #050505;
-$color-lightgray: #f2f2f2;
-$color-green: #25d366;
-$color-green-hover: #128c7e;
-$color-footer-hover: #373c37;
-$color-border: #60000d;
-$color-border-dark: #6d0000;
-$gray: #868585;
-
-
+// Importamos los estilos parciales
+@use './partials/body';
+@use './partials/header';
+@use './partials/footer';
+// Importamos los estilos de las páginas
+@use './pages/CV-Style';
+@use './pages/Contact-Me-Style';
+@use './pages/Index-Style';

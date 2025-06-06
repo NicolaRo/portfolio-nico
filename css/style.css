@@ -79,7 +79,7 @@ h3 {
   transition: color 0.2s ease-in-out;
 }
 .header .menu a:hover {
-  color: #217dbb;
+  color: rgb(33.1380753138, 125.1882845188, 186.8619246862);
 }
 .header .menu-btn,
 .header .menu-icon {
@@ -129,26 +129,22 @@ h3 {
   font-size: 3rem;
   margin: 0;
 }
-.wrap-education-hero .hero-logo {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border: 5px solid #3498db;
-  margin-bottom: 1rem;
-}
 .wrap-education-hero .hero-img {
   width: 250px;
   height: 250px;
   border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border: 5px solid #3498db;
 }
 
 .CV-hero-master {
   text-align: center;
+}
+.CV-hero-master .start2Impact-container .hero-logo {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  display: block;
 }
 .CV-hero-master .macbook-wrapper-container {
   max-width: 600px;
@@ -163,8 +159,7 @@ h3 {
   left: 14.5%;
   width: 71%;
   height: 77%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .CV-hero-master .Masters-description {
   max-width: 500px;
@@ -184,7 +179,7 @@ h3 {
   transition: background-color 0.3s;
 }
 .CV-hero-master .btn-master:hover {
-  background-color: #217dbb;
+  background-color: rgb(33.1380753138, 125.1882845188, 186.8619246862);
   text-decoration: none;
 }
 
@@ -237,6 +232,9 @@ h3 {
   background: #f1c40f;
 }
 
+.my-projects .section-title .coding-guy {
+  margin: 2rem auto;
+}
 .my-projects .card-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -390,7 +388,7 @@ h3 {
   transition: background-color 0.3s;
 }
 #contact-form .sumbit-btn button:hover {
-  background-color: #217dbb;
+  background-color: rgb(33.1380753138, 125.1882845188, 186.8619246862);
 }
 
 .whatsapp-button {
@@ -432,8 +430,7 @@ h3 {
   border-radius: 50%;
   border: 5px solid #3498db;
   margin: 0 auto 2rem auto;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .wrap-title-portrait .bio-text p {
   margin-bottom: 1rem;
@@ -501,4 +498,6 @@ h3 {
 }
 .footer .footer-social-icons .social-icon:hover {
   transform: scale(1.2);
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */

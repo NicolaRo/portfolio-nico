@@ -1,0 +1,36 @@
+.depyl-project-container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.depyl-project-container h2 {
+  color: #801023;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #60000d;
+  padding-bottom: 5px;
+}
+.depyl-project-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+.depyl-project-container p {
+  color: #a7a8a7;
+  line-height: 1.6;
+}
+.depyl-project-container .project-details {
+  margin-top: 20px;
+  color: #a7a8a7;
+}
+.depyl-project-container .project-details h3 {
+  color: #801023;
+  margin-bottom: 10px;
+}
+.depyl-project-container .project-details ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}/*# sourceMappingURL=Depyl-Project.css.map */

@@ -1,0 +1,238 @@
+// Importamos el módulo de color de Sass (buena práctica)
+@use 'sass:color';
+@use '../variables' as *;
+
+// --- ESTILOS ESPECÍFICOS DE LA PÁGINA CV ---
+
+// Hero de Educación
+.wrap-education-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  background: $color-light-gray;
+
+  .CV-Page-title {
+    h3 {
+      font-size: 1.5rem;
+      margin: 0;
+    }
+    h2 {
+      font-size: 3rem;
+      margin: 0;
+    }
+  }
+
+  .hero-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid $color-primary;
+  }
+}
+
+// Sección del Máster
+.CV-hero-master {
+  text-align: center;
+
+  .start2Impact-container {
+    .hero-logo {
+      width: 150px;
+      height: 150px;
+      margin: 0 auto;
+      display: block;
+    }
+  }
+  .macbook-wrapper-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    .macbook-wrapper {
+      position: relative; // Contenedor para el GIF
+      .gif-overlay {
+        position: absolute;
+        top: 5.5%; // Ajuste fino para la pantalla
+        left: 14.5%; // Ajuste fino para la pantalla
+        width: 71%;
+        height: 77%;
+        object-fit: cover;
+      }
+    }
+  }
+  .Masters-description {
+    max-width: 500px;
+    margin: 2rem auto;
+    ul {
+      list-style-position: inside;
+    }
+  }
+  .btn-master {
+    display: inline-block;
+    background: $color-primary;
+    color: $color-white;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-weight: bold;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+    &:hover {
+      background-color: color.adjust($color-primary, $lightness: -10%);
+      text-decoration: none;
+    }
+  }
+}
+
+// Sección de Skills
+.Skills-container {
+  .skills-bars-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  .skills-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+    .skill-icon {
+      width: 40px;
+      height: 40px;
+    }
+    .bar {
+      flex-grow: 1;
+      height: 25px;
+      background: $color-light-gray;
+      border-radius: 5px;
+      position: relative;
+      overflow: hidden;
+
+      // La barra de progreso real
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        border-radius: 5px;
+      }
+      // La etiqueta de texto
+      &::before {
+        content: attr(data-skill);
+        position: absolute;
+        left: 10px;
+        line-height: 25px;
+        color: $color-dark;
+        font-weight: bold;
+        font-size: 0.8rem;
+      }
+    }
+    // Niveles de la barra
+    .intermediate::after {
+      width: 70%;
+      background: $color-success;
+    }
+    .learning::after {
+      width: 40%;
+      background: $color-warning;
+    }
+  }
+}
+
+// Sección de Proyectos
+.my-projects {
+  .section-title {
+    .coding-guy {
+      margin: 2rem auto;
+    }
+  }
+
+  .card-container {
+    display: grid;
+    // Rejilla responsive: 3 columnas en grande, 2 en mediano, 1 en pequeño
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  .card {
+    background: $color-white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+
+    .image {
+      height: 100px;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        max-height: 100%;
+        width: auto;
+      }
+    }
+
+    .tag-container {
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+      gap: 0.5rem;
+      margin: 1rem 0;
+      h3 {
+        font-size: 1rem;
+        margin: 0;
+      }
+      h5 {
+        font-family: $font-primary;
+        background: $color-light-gray;
+        padding: 0.2rem 0.5rem;
+        border-radius: 5px;
+        font-size: 0.7rem;
+      }
+    }
+
+    // Empuja el botón hacia abajo
+    .projects-btn {
+      margin-top: auto;
+      background: $color-dark;
+      color: $color-white;
+      padding: 0.6rem 1rem;
+      border-radius: 5px;
+      &:hover {
+        background: $color-primary;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+// --- FOOTER (Idéntico al de la página principal) ---
+.footer {
+  background-color: $color-dark;
+  color: $color-light-gray;
+  padding: 3rem 1rem;
+  text-align: center;
+
+  // ... (El resto de los estilos del footer son los mismos)
+  .footer-links {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  .footer-btn {
+    color: white;
+    font-weight: bold;
+  }
+  .footer-social-icons {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .social-icon {
+    width: 30px;
+  }
+}

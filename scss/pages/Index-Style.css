@@ -1,0 +1,88 @@
+.wrap-title-portrait {
+  max-width: 800px;
+  margin: 4rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+.wrap-title-portrait h1 {
+  font-family: "Lobster", cursive;
+  font-size: 4rem;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+}
+.wrap-title-portrait .hero-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 5px solid #3498db;
+  margin: 0 auto 2rem auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.wrap-title-portrait .bio-text p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.wrap-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin: 4rem 1rem;
+}
+
+.logo-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background-color: white;
+  color: #2c3e50;
+  font-weight: bold;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+.logo-button img {
+  width: 90px;
+}
+.logo-button:hover {
+  text-decoration: none;
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.footer {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+.footer .footer-links {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.footer .footer-links .footer-btn {
+  color: white;
+  font-weight: bold;
+}
+.footer .footer-social-icons {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.footer .footer-social-icons .social-icon {
+  width: 30px;
+  transition: transform 0.2s ease;
+}
+.footer .footer-social-icons .social-icon:hover {
+  transform: scale(1.2);
+}/*# sourceMappingURL=Index-Style.css.map */

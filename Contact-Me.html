@@ -1,128 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-    <meta http-equiv= "X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Contact Rossi Nicola">
-    <meta property="og:description" content="Contact form & social media links.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://nicolaro.github.io/Contact-Me.html">
-    <meta property="og:image" content="https://nicolaro.github.io/img/Contact-Me-img/Get-in-touch.png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Contact Rossi Nicola" />
+    <meta property="og:description" content="Contact form & social media links." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://nicolaro.github.io/Contact-Me.html" />
+    <meta property="og:image" content="https://nicolaro.github.io/img/Contact-Me-img/Get-in-touch.png" />
     <title>Nicola Rossi Full-Stack Developer</title>
-    <link rel="icon" type="image/png" href="./img/favicon-32x32.png">
+    <link rel="icon" type="image/png" href="./img/favicon-32x32.png" />
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-      </style>
-    <link rel="stylesheet" href="/CSS/Contact-Me-Style.css">
+    </style>
+    <link rel="stylesheet" href="css/style.css" />
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-<script>
-  (function(){
-    emailjs.init("4fcy6Mn0D3I2UsLwi");
-  })();
-</script>
-</head>
-<body>
-  <header class="header">
-    <img src="./img/Logo_Black-White.png" alt="Logo" class="logo-img" style="width: 50px; height: auto; margin-top: 10px;">
-    <a href="index.html" class="logo">
-    </a>
-    <input class="menu-btn" id="menu-btn" type="checkbox">
-    <label for="menu-btn" class="menu-icon">
-     <span class="nav-icon"></span>
-    </label>
-    <ul class="menu">
-     <li> <a href=index.html>I'm Nicola</a></li>
-     <li> <a href=CV.html>My Developer CV</a></li> 
-     <li> <a href=Contact-Me.html> Contact Me</a></li>
-    </ul>
-  </header>
-  <br>
-  <br>
-  <main>
-    <h1>Contact Me</h1>
-    <div class="wrap-form-container">
-      <img src="./img/Contact-Me-img/Get-in-touch.png" alt="Contact Me" class="hero-img">
-      
-      <div class="container-form">
-        <div class="form-text">
-          <p>Fill out the form below to send me a message. I will get back to you as soon as possible.</p>
-          
-          <form id="contact-form">
-            <div class="field">
-              <label for="name">Name</label>
-              <input type="text" name="name" id="name" required minlength="2" placeholder="Your name">
-            </div>
-            <div class="field">
-              <label for="email">Email</label>
-              <input type="email" name="email" id="email" required placeholder="you@example.com">
-            </div>
-            <div class="field">
-              <label for="message">Message</label>
-              <textarea name="message" id="message" required minlength="10" placeholder="Write your message..."></textarea>
-            </div>
-            <div class="sumbit-btn">
-              <button type="submit">Send message</button>
-            </div>
-          </form>
-        </div> 
-      </div>
-    </div>
-    <div class="whatsapp-button">
-      <a href="https://wa.me/393459778518" target="_blank" class="logo-whatsapp">
-        Start a chat with me <img src="./img/CV-img/whatsapp.png" alt="WhatsApp" style="height: 24px; text-decoration: none;">
-      </a>
-    </div>
-  </main>
-<footer class="footer">
-  <div class="footer-links">
-    <a class="footer-btn"  href="./index.html">Home</a>
-    <a class="footer-btn"  href="./CV.html">CV</a>
-    <a class="footer-btn"  href="./Contact-Me.html">Contact Me</a>
-  </div>
-  <div class="footer-social-icons">
-  <a href="https://www.linkedin.com/in/nicola-rossi-3365a768/" target="_blank">
-    <img src="./img/linkedin-icon-black.png" alt="LinkedIn Profile of Nicola Rossi" class="social-icon"></a>
-  <a href="https://github.com/NicolaRo" target="_blank">
-    <img src="./img/Github-Logo-Black.png" alt="GitHub Profile of Nicola Rossi" class="social-icon"></a>
-  </div>
-    <p>Ethically designed and developed by Rossi Nicola®</p>
-</footer>
     <script>
-      document.getElementById('contact-form').addEventListener('submit', function(event) {
-event.preventDefault();
-
-const name = document.getElementById('name');
-const email = document.getElementById('email');
-const message = document.getElementById('message');
-
-
-if (name.value.trim().length < 2) {
-alert("Il nome deve contenere almeno 2 caratteri.");
-name.focus();
-return;
-}
-const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-if (!emailPattern.test(email.value)) {
-alert("Inserisci un'email valida.");
-email.focus();
-return;
-}
-if (message.value.trim().length < 10) {
-alert("Il messaggio deve contenere almeno 10 caratteri.");
-message.focus();
-return;
-}
-emailjs.sendForm('service_a2dm5gk', 'template_0zzzi64', this)
-.then(function() {
-alert('Messaggio inviato con successo!');
-document.getElementById('contact-form').reset();
-}, function(error) {
-alert('Errore nell\'invio. Riprova.');
-console.log(error);
-});
-});
+      ;(function () {
+        emailjs.init('4fcy6Mn0D3I2UsLwi')
+      })()
     </script>
-</body>
+  </head>
+  <body>
+    <header class="header">
+      <img src="./img/Logo_Black-White.png" alt="Logo" class="logo-img" style="width: 50px; height: auto; margin-top: 10px" />
+      <a href="index.html" class="logo"> </a>
+      <input class="menu-btn" id="menu-btn" type="checkbox" />
+      <label for="menu-btn" class="menu-icon">
+        <span class="nav-icon"></span>
+      </label>
+      <ul class="menu">
+        <li><a href="index.html">I'm Nicola</a></li>
+        <li><a href="CV.html">My Developer CV</a></li>
+        <li><a href="Contact-Me.html"> Contact Me</a></li>
+      </ul>
+    </header>
+    <br />
+    <br />
+    <main>
+      <h1>Contact Me</h1>
+      <div class="wrap-form-container">
+        <img src="./img/Contact-Me-img/Get-in-touch.png" alt="Contact Me" class="hero-img" />
+
+        <div class="container-form">
+          <div class="form-text">
+            <p>Fill out the form below to send me a message. I will get back to you as soon as possible.</p>
+
+            <form id="contact-form">
+              <div class="field">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" required minlength="2" placeholder="Your name" />
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required placeholder="you@example.com" />
+              </div>
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" required minlength="10" placeholder="Write your message..."></textarea>
+              </div>
+              <div class="sumbit-btn">
+                <button type="submit">Send message</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="whatsapp-button">
+        <a href="https://wa.me/393459778518" target="_blank" class="logo-whatsapp">
+          Start a chat with me <img src="./img/CV-img/whatsapp.png" alt="WhatsApp" style="height: 24px; text-decoration: none" />
+        </a>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer-links">
+        <a class="footer-btn" href="./index.html">Home</a>
+        <a class="footer-btn" href="./CV.html">CV</a>
+        <a class="footer-btn" href="./Contact-Me.html">Contact Me</a>
+      </div>
+      <div class="footer-social-icons">
+        <a href="https://www.linkedin.com/in/nicola-rossi-3365a768/" target="_blank">
+          <img src="./img/linkedin-icon-black.png" alt="LinkedIn Profile of Nicola Rossi" class="social-icon"
+        /></a>
+        <a href="https://github.com/NicolaRo" target="_blank">
+          <img src="./img/Github-Logo-Black.png" alt="GitHub Profile of Nicola Rossi" class="social-icon"
+        /></a>
+      </div>
+      <p>Ethically designed and developed by Rossi Nicola®</p>
+    </footer>
+    <script>
+      document.getElementById('contact-form').addEventListener('submit', function (event) {
+        event.preventDefault()
+
+        const name = document.getElementById('name')
+        const email = document.getElementById('email')
+        const message = document.getElementById('message')
+
+        if (name.value.trim().length < 2) {
+          alert('Il nome deve contenere almeno 2 caratteri.')
+          name.focus()
+          return
+        }
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+        if (!emailPattern.test(email.value)) {
+          alert("Inserisci un'email valida.")
+          email.focus()
+          return
+        }
+        if (message.value.trim().length < 10) {
+          alert('Il messaggio deve contenere almeno 10 caratteri.')
+          message.focus()
+          return
+        }
+        emailjs.sendForm('service_a2dm5gk', 'template_0zzzi64', this).then(
+          function () {
+            alert('Messaggio inviato con successo!')
+            document.getElementById('contact-form').reset()
+          },
+          function (error) {
+            alert("Errore nell'invio. Riprova.")
+            console.log(error)
+          }
+        )
+      })
+    </script>
+  </body>
 </html>
